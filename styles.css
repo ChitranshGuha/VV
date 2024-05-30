@@ -1,0 +1,406 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F0F0F0;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #000000;
+    padding: 1%;
+    box-sizing: border-box;
+    z-index: 1000;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.navbar a {
+    color: #FFD700;
+    padding: 1% 2%;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.2vw;
+}
+
+.navbar a:hover {
+    background-color: #333333;
+    color: #FFFFFF;
+}
+
+.section {
+    padding: 8% 5%;
+    /* height: 100vh; */
+    box-sizing: border-box;
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+
+.welcome-head{
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    line-height: 3vw;
+}
+
+.home-content {
+    /* box-sizing: border-box; */
+    /* padding: 8% 5%; */
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: auto;
+}
+
+.welcome-section, .updates-section {
+    width: 49%;
+    box-sizing: border-box;
+}
+
+.welcome-section {
+    /* background-color: #FFF9C4; */
+    /* padding: 5%; */
+    text-align: left;
+    /* margin-top: 2%; */
+}
+
+.welcome-content{
+    font-size: 1.3vw;
+}
+.updates-section {
+    /* background-color: #FFF9C4; */
+    padding: 5%;
+    /* margin-top: 2%; */
+}
+
+.updates-table {
+    background-color: #FFF9C4;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.updates-table th, .updates-table td {
+    border: 1px solid #000;
+    padding: 1%;
+    text-align: left;
+    background-color: #FFF9C4;
+}
+
+.updates-table th {
+    background-color: #FFD700;
+}
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+#section2 {
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 5%;
+    background-color: #dcdcdc;
+}
+.sub-div{
+    width: 15%;
+    margin: 2.5%;
+    background-color: #FFC107;
+    padding: 5%;
+    border: 1px solid black;
+}
+
+.timg{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 4%;
+}
+.name {
+    font-size: 100%;
+    font-weight: bold;
+}
+
+.dept {
+    font-style: italic;
+}
+.logo1{
+  width: 20%;
+  height: auto;
+}
+.logo11{
+  width: 20%;
+  height: auto;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+
+#section3 {
+    /* background-color: #FFD700; */
+    /* background-color: #FFF9C4; */
+}
+.containerAU {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.Aubox {
+    flex: 1;
+    padding: 2%;
+    box-sizing: border-box;
+    font-size: 1.5vw;
+}
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+/*review slideshow css*/
+/* Slideshow container */
+#section5{
+    display: flex;
+    background-color: #FFC107;
+}
+.wpsau{
+    flex: 1;
+    margin-left: 10%;
+    color: white;
+    font-weight: bold;
+    font-size: 3vw;
+}
+.slideshow-container {
+    flex: 1;
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+/* Fade animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+/* Container for Courses */
+.containerCourses {
+    display: flex;
+    justify-content: center;
+}
+
+/* Grid layout for Courses */
+.gCourses {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 1rem;
+}
+
+/* Individual Course Items */
+.giCourses {
+    background-color: #dcdcdc;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+/* Add visible class when in view */
+.giCourses.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Pop-up effect on hover */
+.giCourses:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(246, 226, 5, 0.667);
+}
+
+@media (max-width: 768px) {
+    .gCourses {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .gCourses {
+        grid-template-columns: 1fr; /* 1 column on small screens */
+    }
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+/*Gallery slider*/
+/* Slider Container */
+.slider-container {
+    position: relative;
+    width: 45%;
+    margin: auto;
+    overflow: hidden;
+    background-color: #dcdcdc;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.slideshow-container {
+    position: relative;
+    max-width: 600px; /* Adjust width as needed */
+    margin: auto;
+}
+
+/* Slider */
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Slide */
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Slide Image */
+.slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Navigation Buttons */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 1rem;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 50%;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+
+#section7 {
+    background-color: #FFEB3B;
+    /* margin-bottom: 35%; */
+}
+.containerCU {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: -10%;
+}
+
+.OL5 {
+    flex: 1;
+    padding: 2%;
+    box-sizing: border-box;
+    font-size: 1.5vw;
+}
+.OR5 {
+    flex: 2;
+    padding: 2%;
+    box-sizing: border-box;
+    font-size: 1.5vw;
+}
+input[type=submit] {
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    border-radius: 40%;
+    cursor: pointer;
+  }
+  /* -------------------------------------------------------------------------------------------------------------------------------- */
+#section8{
+    background-color: #FFF9C4;
+    /* margin-top: -40%; */
+    display: flex;
+    margin: 0;
+    padding: 3%;
+}
+.LEOF{
+    flex: 1;
+    margin-left: 5% ;
+}
+.MEOF{
+    flex: 1;
+    margin: 5%;
+}
+.REOF {
+    flex: 1;
+    /* display: flex; */
+    /* justify-content: space-around; */
+    /* align-items: center; */
+    margin-right: -10%;
+}
+
+.social-icon{
+    height: 1%;
+    width: auto;
+    padding-left: 5%; 
+}
+
+.social-icon:last-child {
+    padding-right: 5%; 
+}
+  /* -------------------------------------------------------------------------------------------------------------------------------- */
+  .button {
+    background-color: #FFC107;
+    color: #000000;
+    border: none;
+    padding: 1% 2%;
+    cursor: pointer;
+    margin: 2%;
+    font-size: 1.2vw;
+    display: inline-block;
+}
+
+.button:hover {
+    background-color: #FFD700;
+    color: #000000;
+}
